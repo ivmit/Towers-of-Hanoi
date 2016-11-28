@@ -1,4 +1,3 @@
-console.clear();
 
 function Hanoi(src){
     this.algorithmMoveTracker = 0;
@@ -75,8 +74,10 @@ Hanoi.prototype.solve = function(moveTrace){
 }
 
 
+//change length prop in order to generate numbers
+var dataSet = Array.from({ length: 20 }, function(v, k) { return k + 1 }).reverse();
 
-var puzzle = new Hanoi([3,2,1]);
+var puzzle = new Hanoi(dataSet);
 puzzle.solve(true); //Pass in true or false for Log in console moves
 
 console.log('source Pilon',puzzle.src);
